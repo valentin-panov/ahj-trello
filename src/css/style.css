@@ -1,0 +1,253 @@
+/*NULLIFY*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+.display-none {
+  display: none;
+}
+/*--------------------*/
+
+body {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: #5274e9;
+}
+
+.cards-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33%;
+  justify-content: space-between;
+
+  min-width: 30vw;
+  min-height: 10vh;
+  width: fit-content;
+  height: fit-content;
+
+  margin: 10px 5px;
+  padding: 10px;
+  font-size: medium;
+  text-align: center;
+
+  background-color: #dfdfdf;
+  border: 1px solid black;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.container__header {
+  display: block;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.container__footer {
+  display: block;
+  text-align: left;
+  padding: 5px 5px 0;
+}
+
+.card {
+  position: relative;
+  display: block;
+  text-align: left;
+
+  margin-bottom: 10px;
+
+  padding: 10px 15px 10px 10px;
+
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0/16%), 0 2px 10px 0 rgb(0 0 0/12%);
+
+  list-style-type: none;
+}
+.card.draggedGhost {
+  font-size: medium;
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+}
+.transparent {
+  opacity: 0;
+}
+
+.card-delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.container__footer-text_active {
+  text-decoration: underline;
+}
+
+.icon-cancel {
+  cursor: pointer;
+  margin: 5px 15px;
+}
+
+.valid {
+  border: 1px solid lightgreen;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.form__input {
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px;
+
+  width: 100%;
+
+  font-size: medium;
+  line-height: 1.5;
+  text-align: left;
+  vertical-align: middle;
+
+  resize: none;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+
+  font-size: medium;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: #2da653;
+  border-color: #2da653;
+
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.form__input-button-holder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.form-error {
+  position: absolute;
+  padding: 5px 10px;
+  width: 200px;
+  background: #fff;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  border: 1px black solid;
+  border-radius: 5px;
+  font-size: medium;
+  z-index: 999;
+}

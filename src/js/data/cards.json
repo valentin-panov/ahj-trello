@@ -1,0 +1,41 @@
+[
+  {
+    "id": "TODO",
+    "entries": [
+      {
+        "id": "1",
+        "text": "Welcome to Trello"
+      },
+      {
+        "id": "2",
+        "text": "This is a card"
+      }
+    ]
+  },
+  {
+    "id": "IN PROGRESS",
+    "entries": [
+      {
+        "id": "3",
+        "text": "Invite your team to this board using Add Members button"
+      },
+      {
+        "id": "4",
+        "text": "Drag people onto a card to indicate that they're responsible for it"
+      }
+    ]
+  },
+  {
+    "id": "DONE",
+    "entries": [
+      {
+        "id": "5",
+        "text": "To learn more tricks, check out the guide"
+      },
+      {
+        "id": "6",
+        "text": "Use as many boards as you want. We'll make more!"
+      }
+    ]
+  }
+]
