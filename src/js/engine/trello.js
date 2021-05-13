@@ -138,9 +138,16 @@ export default class Trello {
     }
     this.ghostCard.style.left = `${event.pageX - this.coordX}px`;
     this.ghostCard.style.top = `${event.pageY - this.coordY}px`;
-    const closest = document.elementFromPoint(event.clientX, event.clientY).closest('li.card');
-    if (closest) {
+    const column = document
+      .elementFromPoint(event.clientX, event.clientY)
+      .closest('div.cards-column');
+    if (column) {
       const { height, top } = this.draggedCard.getBoundingClientRect();
+      const closest = document.elementFromPoint(event.clientX, event.clientY).closest('li.card');
+      if (!closest) {
+        column.querySelector('ul.cards-list').append(this.draggedCard);
+        return;
+      }
       if (event.pageY < top - height / 2) {
         closest.before(this.draggedCard);
       } else {
